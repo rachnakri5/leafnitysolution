@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS to hide the number input arrows */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+
+        /* Set the font-family for the entire body */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Main contact section container -->
+    <section class="py-16 px-4 md:px-8 lg:px-12">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
+
+            <!-- Left Column: Contact Information Cards -->
+            <div class="flex-1 space-y-8">
+                <!-- Info Queries Card -->
+                <div class="rounded-3xl p-8 bg-gray-100 border-2 border-orange-500 shadow-lg">
+                    <h3 class="text-2xl font-bold text-orange-500 mb-2">Info Queries</h3>
+                    <p class="text-base font-medium text-gray-700">
+                        <a href="mailto:contact@leafnitysolution.com" class="text-gray-900 hover:underline">contact@leafnitysolution.com</a>
+                    </p>
+                </div>
+                
+                <!-- Careers Card -->
+                <div class="rounded-3xl p-8 bg-gray-100 border-2 border-orange-500 shadow-lg">
+                    <h3 class="text-2xl font-bold text-orange-500 mb-2">Careers</h3>
+                    <p class="text-base font-medium text-gray-700">
+                        <a href="mailto:careers@10xdigital.ae" class="text-gray-900 hover:underline">careers@leafnitysolution.com</a>
+                    </p>
+                </div>
+                
+                <!-- Contact Card -->
+                <div class="rounded-3xl p-8 bg-gray-100 border-2 border-orange-500 shadow-lg">
+                    <h3 class="text-2xl font-bold text-orange-500 mb-2">Contact</h3>
+                    <p class="text-base font-medium text-gray-700">
+                        <a href="tel:+97145644587" class="text-gray-900 hover:underline">+971 4 564 4587</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column: Contact Form -->
+            <div class="flex-1">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-orange-500 leading-tight mb-10">
+                    CONNECT WITH US
+                </h2>
+                <form class="space-y-6">
+                    <!-- Full Name and Email Address Inputs -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Full Name" class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    </div>
+                    
+                    <!-- Phone Number and Service Dropdown -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Phone Number Input with Flag & Country Code Dropdown -->
+                        <div class="relative flex items-center w-full rounded-xl border border-gray-300 focus-within:ring-2 focus-within:ring-orange-500">
+                            <select id="country-code" class="p-4 rounded-xl bg-transparent focus:outline-none pr-0">
+                                <option value="+1">US +1</option>
+                                <option value="+44">GB +44</option>
+                                <option value="+91">IN +91</option>
+                                <option value="+971" selected>EN +971</option>
+                                <option value="+61">AU +61</option>
+                                <option value="+86">CN +86</option>
+                                <option value="+49">DE +49</option>
+                                <option value="+33">FR +33</option>
+                                <option value="+81">JP +81</option>
+                                <option value="+7">RU +7</option>
+                                <option value="+27">ZA +27</option>
+                            </select>
+                            <input type="tel" placeholder="050 123 4567" class="w-full p-4 rounded-xl focus:outline-none bg-transparent">
+                        </div>
+                        
+                        <!-- Service Dropdown -->
+                        <select class="w-full p-4 rounded-xl border border-gray-300 text-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            <option value="" disabled selected>- Select Service -</option>
+                            <option value="service1">Web Design</option>
+                            <option value="service2">Digital Marketing</option>
+                            <option value="service3">Content Creation</option>
+                            <option value="service4">Social Media Management</option>
+                        </select>
+                    </div>
+
+                    <!-- Message Text Area -->
+                    <textarea placeholder="Enter your message" rows="6" class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full py-4 px-6 rounded-xl bg-orange-500 text-white font-bold text-lg shadow-md hover:bg-orange-600 transition-colors">
+                        LET'S TALK
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

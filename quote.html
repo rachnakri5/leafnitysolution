@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Free Quote</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center p-4">
+    <div id="form-container" class="bg-gray-800 p-8 md:p-12 rounded-lg shadow-2xl max-w-lg w-full transform transition-transform duration-300 hover:scale-105">
+        <h2 class="text-3xl font-extrabold text-center text-orange-400 mb-4">Request a Free Quote</h2>
+        <p class="text-center text-gray-400 mb-8">
+            Tell us about your project, and we'll get back to you with a tailored quote.
+        </p>
+        
+        <form id="quoteForm" class="space-y-6">
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required
+                    class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors duration-200">
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required
+                    class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors duration-200">
+            </div>
+            <div>
+                <label for="project" class="block text-sm font-medium text-gray-300 mb-1">Project Details</label>
+                <textarea id="project" name="project" rows="4" placeholder="Describe your digital marketing needs, goals, and any specific services you're interested in..." required
+                    class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors duration-200"></textarea>
+            </div>
+            <button type="submit"
+                class="w-full py-3 px-6 rounded-md bg-orange-500 text-white font-bold text-lg hover:bg-orange-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                Submit Request
+            </button>
+        </form>
+        
+        <div id="successMessage" class="hidden text-center text-xl font-semibold p-8 bg-gray-700 rounded-lg">
+            <h3 class="text-2xl font-bold text-green-400 mb-2">Thank You!</h3>
+            <p class="text-gray-300">We have received your request and will connect with you soon.</p>
+        </div>
+        
+    </div>
+
+    <script>
+        // Get the form and the success message elements
+        const form = document.getElementById('quoteForm');
+        const successMessage = document.getElementById('successMessage');
+
+        // Add a submit event listener to the form
+        form.addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior (which would reload the page)
+            event.preventDefault();
+
+            // Simulate form submission success (in a real-world scenario, you'd send data to a server here)
+            
+            // Hide the form
+            form.style.display = 'none';
+
+            // Show the success message
+            successMessage.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
